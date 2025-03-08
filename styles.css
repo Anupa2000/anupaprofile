@@ -1,0 +1,201 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+  font-family: Arial, sans-serif; /* or your preferred font */
+  background-color: #121212;     /* Dark background for a modern look */
+  color: #ffffff;                /* White text for contrast */
+  line-height: 1.6;
+}
+
+/* Header & Navbar */
+header {
+  position: fixed;      /* Stays at the top on scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  z-index: 999;         /* Ensures the header stays above other elements */
+}
+
+.navbar {
+  /* Currently empty – add a logo or brand name if desired */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;             /* Adjust padding as needed */
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;       /* Vertical spacing between items */
+  }
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Hero Section */
+/* Hero container set up as a flex container */
+.hero {
+  display: flex;
+  align-items: center;         /* Vertically center the content */
+  justify-content: space-between;  /* Space out text and image */
+  min-height: 100vh;           /* Full viewport height */
+  padding: 2rem;
+}
+
+/* Left side text */
+.hero-text {
+  flex: 1;                   /* Take up equal space */
+  text-align: center;          /* Align text to the left */
+  padding-right: 2rem;       /* Space between text and image */
+}
+
+/* Right side image */
+.hero-image {
+  flex: 1;                   /* Take up equal space */
+  text-align: right;         /* Align the image to the right */
+}
+
+/* Style for the image */
+.hero-image img {
+  width: 800px;              /* Adjust as needed */
+  max-width: 100%;           /* Responsive image */
+  border-radius: 8px;        /* Optional rounded corners */
+  opacity: 1;              /* Slight transparency */
+  background: transparent;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background-color: #f39c12;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  white-space: nowrap;       /* Ensures the text stays on one line */
+}
+
+.btn:hover {
+  background-color: #e67e22;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;  /* Stack text and image vertically */
+    text-align: center;
+  }
+  
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-image {
+    text-align: center;
+  }
+}
+
+
+/* Sections */
+section {
+  padding: 5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #ffffff;
+}
+
+/* A small accent line under each section heading */
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f39c12;
+  margin: 0.5rem auto 0;
+}
+
+section p, section li {
+  color: #cccccc;  /* Slightly lighter than white for readability */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+section ul li {
+  margin-bottom: 1rem;
+  background: #1d1d1d;
+  padding: 1rem;
+  border-left: 5px solid #f39c12;
+  border-radius: 4px;
+}
+
+/* Footer (If you add one) */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 769px) {
+  .hero {
+    flex-direction: row;       /* Place image and text side by side on wider screens */
+    text-align: left;
+  }
+  .hero-image {
+    margin-right: 2rem;        /* Space between image and text */
+    margin-bottom: 0;          /* Remove bottom margin in row layout */
+  }
+  .hero h2 {
+    font-size: 4rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
